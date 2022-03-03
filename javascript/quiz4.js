@@ -1,0 +1,10 @@
+let yourName = document.querySelector(".yourName");
+let totalTime = document.querySelector(".totalTime");
+let totalCorrectAnswer = document.querySelector(".totalCorrectAnswer");
+let correctScore = sessionStorage.getItem("totalScore");
+let user_name = sessionStorage.getItem("name");
+let totalTimeMinutes = sessionStorage.getItem("totalTimeMinutes");
+let totalTimeSeconds = sessionStorage.getItem("totalTimeSeconds");
+yourName.innerHTML = `<h3>${user_name} your score<h3>`;
+totalTime.innerHTML = `<h3>total time taken - ${totalTimeMinutes} :${totalTimeSeconds}</h3>`;
+totalCorrectAnswer.innerHTML = `<h3>total correct answer - ${correctScore}</h3>`;

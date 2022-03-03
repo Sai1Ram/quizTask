@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Copse"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+    <title>Quiz</title>
+  </head>
+  <body >
+    <div class="firstPage"  >
+      <div class="quiz">
+        <div class="quiz-header">
+          <span class="welcome">Welecome user</span
+          >
+          <div class="score">SCORE (<span id="correct-score"></span>/<span id="total-question"></span>)</div>
+          <span class="time">00:00</span>
+        </div>
+        <div class="quiz-body">
+        <div id="question">
+          <h2 id="quiz-question"></h2>
+          <div class="answer">
+          <ul class="quiz-optiongrp">
+            <li class="quiz-option" id="quiz-option1"></li>
+            <li class="quiz-option" id="quiz-option2"></li>
+            <li class="quiz-option" id="quiz-option3"></li>
+            <li class="quiz-option" id="quiz-option4"></li>
+          </ul>
+          <div id="result"></div></div>
+          </div>
+        </div>
+        <div class="quiz-footer">
+          <button class="check-answer">Check Answer</button>
+          <button class="nextButton" onclick="nextQuestion()">Next</button>
+         
+      </div>
+    </div>
+    <script src="javascript/quiz3.js"></script>
+    
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quiz</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Copse"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="firstPage" id="page">
+      <form name="welcome_forms" onsubmit="submitForm(event)">
+        <input type="text" placeholder="Enter Your Name" name="name" />
+        <button type="submit" class="startButton">Start Quiz</button>
+      </form>
+    </div>
+    <script src="javascript/quiz3.js"></script>
+    <script>
+      var page = document.querySelector("#page");
+
+      cursorAnimation = (e) => {
+        let span = document.createElement("span");
+        span.style.top = `${e.pageY}px`;
+        span.style.left = `${e.pageX}px`;
+        page.appendChild(span);
+        setTimeout(() => {
+          span.remove();
+        }, 1000);
+      };
+      page.addEventListener("click", cursorAnimation);
+    </script>
+  </body>
+</html>
